@@ -19,17 +19,34 @@ export default function About() {
   }, []);
 
   return (
-    <div ref={ref} className="fade-in max-w-6xl mx-auto py-8">
-      <div className="grid md:grid-cols-2 gap-8 items-center">
+    <div ref={ref} className="fade-in py-20">
+      <div className="grid md:grid-cols-2 gap-10 items-start">
         <div>
-          <h3 className="text-2xl font-bold text-white mb-3">About Me</h3>
-          <p className="text-slate-300">Hi — I&apos;m Riyan Ahmed, an AI Engineering student entering my 2nd year. I enjoy building AI and data-driven applications, learning production-ready backend technologies, and creating dashboard visualizations. (Placeholder — edit this text to suit your bio.)</p>
+          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h3>
+          <p className="text-slate-400 max-w-2xl leading-relaxed">Hi — I&apos;m Riyan Ahmed, an AI Engineering student entering my 2nd year. I enjoy building AI and data-driven applications, learning production-ready backend technologies, and creating dashboard visualizations. (Placeholder — edit this text to suit your bio.)</p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
-          <Stat label="Projects Completed" value={aboutStats.projectsCompleted} />
-          <Stat label="Years Learning" value={aboutStats.yearsLearning} />
-          <Stat label="Technologies" value={aboutStats.technologies} />
+        <div className="bg-white/5 border border-white/6 rounded-xl p-1">
+          <div className="flex">
+            <div className="flex-1 text-center py-6 px-8">
+              <div className="text-3xl font-extrabold text-[color:var(--color-accent)]">{aboutStats.projectsCompleted}</div>
+              <div className="text-sm text-slate-400 mt-1">Projects Completed</div>
+            </div>
+
+            <div className="w-px bg-white/6" />
+
+            <div className="flex-1 text-center py-6 px-8">
+              <div className="text-3xl font-extrabold text-[color:var(--color-accent)]">{aboutStats.yearsLearning}</div>
+              <div className="text-sm text-slate-400 mt-1">Years Learning</div>
+            </div>
+
+            <div className="w-px bg-white/6" />
+
+            <div className="flex-1 text-center py-6 px-8">
+              <div className="text-3xl font-extrabold text-[color:var(--color-accent)]">{aboutStats.technologies}</div>
+              <div className="text-sm text-slate-400 mt-1">Technologies</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

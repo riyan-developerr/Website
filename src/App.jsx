@@ -7,28 +7,38 @@ import Contact from './components/Contact';
 
 export default function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-[color:var(--color-bg)] text-slate-400">
       <Navbar />
 
-      <main className="space-y-20 mt-6">
-        <section id="home" className="pt-8">
-          <Hero />
+      <main className="pt-6">
+        <section id="home" className="py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <Hero />
+          </div>
         </section>
 
-        <section id="skills" className="pt-8">
-          <Skills />
+        <section id="skills" className="py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <Skills />
+          </div>
         </section>
 
-        <section id="about" className="pt-8">
-          <About />
+        <section id="about" className="py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <About />
+          </div>
         </section>
 
-        <section id="projects" className="pt-8">
-          <ProjectsSection />
+        <section id="projects" className="py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <ProjectsSection />
+          </div>
         </section>
 
-        <section id="contact" className="pt-8">
-          <Contact />
+        <section id="contact" className="py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6">
+            <Contact />
+          </div>
         </section>
       </main>
 

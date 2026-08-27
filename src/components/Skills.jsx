@@ -19,14 +19,12 @@ export default function Skills() {
   }, []);
 
   return (
-    <div ref={ref} className="fade-in max-w-6xl mx-auto py-6">
-      <h3 className="text-xl font-semibold text-white mb-4">Skills</h3>
+    <div ref={ref} className="fade-in">
+      <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">Skills</h3>
 
-      <div className="flex gap-3 overflow-x-auto py-2 px-1">
+      <div className="flex flex-wrap gap-3">
         {skills.map((s) => (
-          <span key={s} className="flex-shrink-0 bg-slate-800 text-slate-100 px-4 py-2 rounded-full text-sm font-medium border border-slate-700">
-            {s}
-          </span>
+          <span key={s} className="px-4 py-2 rounded-full text-sm font-medium bg-white/5 border border-white/6 text-slate-200">{s}</span>
         ))}
       </div>
     </div>
