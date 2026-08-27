@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="100%" height="100%" fill="#071022" />
+  <rect x="60" y="60" width="480" height="280" rx="12" fill="#0b1220" stroke="#1f2937" />
+  <rect x="660" y="60" width="480" height="280" rx="12" fill="#0b1220" stroke="#1f2937" />
+  <text x="120" y="420" fill="#9CA3AF" font-size="28">Job Salary Dashboard</text>
+  <text x="120" y="460" fill="#6B7280" font-size="18">Analyzed job salary data and built an interactive dashboard.</text>
+</svg>

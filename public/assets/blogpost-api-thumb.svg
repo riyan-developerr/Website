@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="100%" height="100%" fill="#071022" />
+  <rect x="60" y="60" width="1080" height="120" rx="8" fill="#0b1220" stroke="#1f2937" />
+  <g transform="translate(80,200)">
+    <rect width="280" height="180" rx="8" fill="#0b1220" stroke="#1f2937" />
+    <rect x="320" width="560" height="180" rx="8" fill="#0b1220" stroke="#1f2937" />
+  </g>
+  <text x="120" y="420" fill="#9CA3AF" font-size="28">BlogPost API</text>
+  <text x="120" y="460" fill="#6B7280" font-size="18">FastAPI backend with PostgreSQL & SQLAlchemy.</text>
+</svg>
