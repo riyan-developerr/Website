@@ -6,7 +6,7 @@ export default function Hero() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('riyan@example.com');
+    navigator.clipboard.writeText('riyan.ahmed.khan.10@gmail.com');
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };

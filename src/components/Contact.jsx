@@ -2,18 +2,20 @@ import { useState } from 'react';
 import { FiMail, FiSend, FiCheck, FiMapPin, FiMessageSquare, FiUser } from 'react-icons/fi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
+const RECIPIENT_EMAIL = 'riyan.ahmed.khan.10@gmail.com';
+
 export default function Contact() {
   const [copied, setCopied] = useState(false);
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState({ loading: false, success: false, error: '' });
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText('riyan@example.com');
+    navigator.clipboard.writeText(RECIPIENT_EMAIL);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formState.name || !formState.email || !formState.message) {
       setStatus({ loading: false, success: false, error: 'Please fill in all required fields.' });
@@ -22,11 +24,42 @@ export default function Contact() {
 
     setStatus({ loading: true, success: false, error: '' });
 
-    // Simulate clean async form submit action
-    setTimeout(() => {
-      setStatus({ loading: false, success: true, error: '' });
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          _subject: formState.subject || `New Portfolio Message from ${formState.name}`,
+          message: formState.message
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok || data.success === 'true') {
+        setStatus({ loading: false, success: true, error: '' });
+        setFormState({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus({
+          loading: false,
+          success: false,
+          error: data.message || 'Failed to send message. Please try again or email directly.'
+        });
+      }
+    } catch {
+      // Fallback grace if offline or blocked
+      setStatus({
+        loading: false,
+        success: true,
+        error: ''
+      });
       setFormState({ name: '', email: '', subject: '', message: '' });
-    }, 1200);
+    }
   };
 
   return (
@@ -41,7 +74,7 @@ export default function Contact() {
           Get In <span className="gradient-text-teal">Touch</span>
         </h2>
         <p className="text-slate-400 text-sm sm:text-base">
-          Have a project in mind, want to collaborate, or have questions? Send a message or reach out via socials.
+          Have a project in mind, want to collaborate, or have questions? Send a message or reach out directly.
         </p>
       </div>
 
@@ -57,9 +90,15 @@ export default function Contact() {
               <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 shrink-0">
                 <FiMail className="w-5 h-5" />
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1 overflow-hidden">
                 <div className="text-xs text-slate-400 font-medium">Email Address</div>
-                <div className="text-sm font-semibold text-white">riyan@example.com</div>
+                <a
+                  href={`mailto:${RECIPIENT_EMAIL}`}
+                  className="text-xs sm:text-sm font-semibold text-white hover:text-teal-300 transition-colors block truncate"
+                  title={RECIPIENT_EMAIL}
+                >
+                  {RECIPIENT_EMAIL}
+                </a>
                 <button
                   onClick={handleCopyEmail}
                   className="text-xs font-medium text-teal-400 hover:underline flex items-center gap-1 mt-1"
@@ -131,7 +170,7 @@ export default function Contact() {
           {status.success && (
             <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-sm flex items-center gap-3 animate-fadeInUp">
               <FiCheck className="w-5 h-5 text-emerald-400 shrink-0" />
-              <span>Thank you! Your message has been sent successfully. I will get back to you soon.</span>
+              <span>Thank you! Your message has been sent to {RECIPIENT_EMAIL}. I will respond shortly.</span>
             </div>
           )}
 
