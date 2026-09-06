@@ -109,7 +109,7 @@ export default function Hero() {
                 <div className="text-left">
                   <div className="text-xs text-slate-400 font-medium">Based in</div>
                   <div className="text-sm text-white font-semibold flex items-center gap-1">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400" /> Remote / India
+                    <span className="w-2 h-2 rounded-full bg-emerald-400" /> Remote / Pakistan
                   </div>
                 </div>
 

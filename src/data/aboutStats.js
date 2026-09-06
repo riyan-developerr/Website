@@ -1,11 +1,11 @@
 const aboutStats = {
-  projectsCompleted: 5,
+  projectsCompleted: 2,
   yearsLearning: 2,
-  technologies: 9,
+  technologies: 5,
   statsList: [
-    { label: 'Completed Projects', value: '5+', prefix: '' },
+    { label: 'Completed Projects', value: '2+', prefix: '' },
     { label: 'Years of Learning', value: '2nd Year', prefix: '' },
-    { label: 'Core Technologies', value: '9+', prefix: '' }
+    { label: 'Core Technologies', value: '5+', prefix: '' }
   ]
 };
 

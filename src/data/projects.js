@@ -11,7 +11,7 @@ const projects = [
     ],
     tech: ['Excel', 'Data Analysis', 'Data Visualization', 'Statistics'],
     githubUrl: 'https://github.com/riyan-developerr/Portfolio/tree/master/Excel/Projects/Salary_Dashboard(PROJECT_1)',
-    liveUrl: 'https://riyan-job-dashboard.example.com',
+    liveUrl: 'https://pern-my.sharepoint.com/:x:/r/personal/u2025737_giki_edu_pk/_layouts/15/Doc.aspx?sourcedoc=%7B174306B6-9658-46B7-8B65-429DE837A66C%7D&file=Salary_Dashboard.xlsx&action=default&mobileredirect=true',
     youtubeId: '',
     thumbnail: '/assets/job-dashboard-thumb.png',
     featured: true
