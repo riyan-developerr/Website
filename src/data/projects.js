@@ -28,7 +28,7 @@ const projects = [
     ],
     tech: ['FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Python', 'JWT'],
     githubUrl: 'https://github.com/riyan-developerr/render-Fastapi-project/tree/fastapi-blogpost-project',
-    liveUrl: '',
+    liveUrl: 'https://fastapi-project-frontend.vercel.app/',
     youtubeId: '',
     thumbnail: '/assets/blogpost-api-thumb.png',
     featured: true
