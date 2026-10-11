@@ -1,4 +1,4 @@
-const JARVIS_REPO = 'https://github.com/riyan-developerr/jarvis-voice-assistant';
+const JARVIS_REPO = 'https://github.com/riyan-developerr/Jarvis';
 
 const projects = [
   {

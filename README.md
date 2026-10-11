@@ -8,7 +8,7 @@ My personal portfolio website: who I am, what I build, and how to reach me.
 
 | Project | What it is |
 |---|---|
-| [**Jarvis: AI Voice Assistant**](https://github.com/riyan-developerr/jarvis-voice-assistant) ⭐ *my first personal project* | A free voice assistant that controls Windows: on-device wake phrase and speech recognition, an LLM agent with 11 tools, and a safety layer. |
+| [**Jarvis: AI Voice Assistant**](https://github.com/riyan-developerr/Jarvis) ⭐ *my first personal project* | A free voice assistant that controls Windows: on-device wake phrase and speech recognition, an LLM agent with 11 tools, and a safety layer. |
 | [**BlogPost RESTful API**](https://github.com/riyan-developerr/render-Fastapi-project/tree/fastapi-blogpost-project) | FastAPI + PostgreSQL backend with JWT auth and SQLAlchemy ORM. |
 | [**Job Salary Analytics Dashboard**](https://github.com/riyan-developerr/Portfolio/tree/master/Excel/Projects/Salary_Dashboard(PROJECT_1)) | Interactive Excel dashboard of salary trends across tech roles. |
 
