@@ -1,4 +1,46 @@
+const JARVIS_REPO = 'https://github.com/riyan-developerr/jarvis-voice-assistant';
+
 const projects = [
+  {
+    id: 'jarvis',
+    title: 'Jarvis — AI Voice Assistant for Windows',
+    category: 'AI & Automation',
+    badge: 'My First Personal Project',
+    tagline: 'Say “Hey Luffy”, then tell your laptop what to do.',
+    description: 'A free, voice-controlled AI assistant that runs a Windows laptop. The wake phrase and speech recognition run on-device, everyday commands are handled instantly by a built-in engine, and anything open-ended goes to an LLM agent that plans multi-step tasks with 11 tools, all behind a safety layer that asks before risky actions.',
+    highlights: [
+      'On-device wake phrase + speech recognition: your voice never leaves the laptop',
+      'LLM agent with tool calling (apps, files, media, screen OCR, web, reminders, memory…)',
+      'Safety policy: confirmations, hard refusals, Recycle-Bin-only deletes, audit log',
+      'Natural online voices with automatic offline fallback; costs $0 to run'
+    ],
+    stats: [
+      { value: '11', label: 'AI tools' },
+      { value: '389', label: 'Passing tests' },
+      { value: '100%', label: 'Local speech recognition' },
+      { value: '$0', label: 'Monthly cost' }
+    ],
+    pipeline: ['Wake phrase', 'Speech → text', 'Built-in commands / LLM agent', '11 tools + safety checks', 'Natural voice reply'],
+    pros: [
+      'Private by design and free to run',
+      'Instant offline commands, AI for everything else',
+      'Switches between 3 free models at rate limits'
+    ],
+    limitations: [
+      'Windows 10/11 (x64) only',
+      'English only',
+      'AI bound by Groq free-tier limits'
+    ],
+    tech: ['Python', 'LLM Agents', 'Groq API', 'sherpa-onnx', 'Whisper', 'Edge TTS', 'pywebview', 'Win32 / WinRT', 'pytest'],
+    githubUrl: JARVIS_REPO,
+    docsUrl: `${JARVIS_REPO}#installation`,
+    liveUrl: '',
+    youtubeId: '',
+    thumbnail: '/assets/jarvis-thumb.webp',
+    thumbnailAlt: 'Jarvis desktop window: waiting for the wake phrase, and answering a question',
+    featured: true,
+    spotlight: true
+  },
   {
     id: 'salary-dashboard',
     title: 'Job Salary Analytics Dashboard',

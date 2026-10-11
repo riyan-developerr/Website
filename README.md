@@ -1,16 +1,34 @@
-# React + Vite
+# Riyan Ahmed: Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+My personal portfolio website: who I am, what I build, and how to reach me.
 
-Currently, two official plugins are available:
+**Built with:** React 19 · Vite · Tailwind CSS v4 · react-icons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Featured projects
 
-## React Compiler
+| Project | What it is |
+|---|---|
+| [**Jarvis: AI Voice Assistant**](https://github.com/riyan-developerr/jarvis-voice-assistant) ⭐ *my first personal project* | A free voice assistant that controls Windows: on-device wake phrase and speech recognition, an LLM agent with 11 tools, and a safety layer. |
+| [**BlogPost RESTful API**](https://github.com/riyan-developerr/render-Fastapi-project/tree/fastapi-blogpost-project) | FastAPI + PostgreSQL backend with JWT auth and SQLAlchemy ORM. |
+| [**Job Salary Analytics Dashboard**](https://github.com/riyan-developerr/Portfolio/tree/master/Excel/Projects/Salary_Dashboard(PROJECT_1)) | Interactive Excel dashboard of salary trends across tech roles. |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run it locally
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # production build in dist/
+npm run lint
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Adding a project
+
+Projects are data-driven. Add an entry to [`src/data/projects.js`](src/data/projects.js) and put its image in `public/assets/`.
+
+- Regular projects appear as cards in the grid.
+- Set `spotlight: true` to show a project as a wide case-study card, with `badge`, `stats`, `pipeline`, `pros`, `limitations` and `docsUrl` (see the Jarvis entry for an example).
+
+## Contact
+
+- GitHub: [@riyan-developerr](https://github.com/riyan-developerr)
+- LinkedIn: [Riyan Ahmad](https://www.linkedin.com/in/riyan-ahmad/)

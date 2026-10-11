@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import projects from '../data/projects';
 import ProjectCard from './ProjectCard';
+import ProjectSpotlight from './ProjectSpotlight';
 import { FiFolder, FiGrid } from 'react-icons/fi';
 
 export default function ProjectsSection() {
@@ -9,6 +10,8 @@ export default function ProjectsSection() {
   const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category).filter(Boolean)))];
 
   const filteredProjects = filter === 'All' ? projects : projects.filter((p) => p.category === filter);
+  const spotlightProjects = filteredProjects.filter((p) => p.spotlight);
+  const gridProjects = filteredProjects.filter((p) => !p.spotlight);
 
   return (
     <div className="py-12 space-y-10">
@@ -23,7 +26,7 @@ export default function ProjectsSection() {
             Featured <span className="gradient-text-teal">Projects</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-xl">
-            A showcase of production-ready REST APIs, data visualization dashboards, and software projects.
+            A showcase of AI assistants, production-ready REST APIs, and data visualization dashboards.
           </p>
         </div>
 
@@ -46,12 +49,19 @@ export default function ProjectsSection() {
         </div>
       </div>
 
+      {/* Flagship project(s) */}
+      {spotlightProjects.map((project) => (
+        <ProjectSpotlight key={project.id || project.title} project={project} />
+      ))}
+
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-        {filteredProjects.map((project) => (
-          <ProjectCard key={project.id || project.title} project={project} />
-        ))}
-      </div>
+      {gridProjects.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          {gridProjects.map((project) => (
+            <ProjectCard key={project.id || project.title} project={project} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

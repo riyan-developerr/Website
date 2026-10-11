@@ -5,7 +5,9 @@ export const skillCategories = [
       { name: 'Python', icon: 'SiPython', level: 'Advanced' },
       { name: 'FastAPI', icon: 'SiFastapi', level: 'Intermediate' },
       { name: 'SQLAlchemy', icon: 'SiSqlalchemy', level: 'Intermediate' },
-      { name: 'REST APIs', icon: 'FiServer', level: 'Advanced' }
+      { name: 'REST APIs', icon: 'FiServer', level: 'Advanced' },
+      { name: 'LLM Agents & Tool Calling', icon: 'FiCpu', level: 'Intermediate' },
+      { name: 'Speech AI (STT / TTS)', icon: 'FiMic', level: 'Intermediate' }
     ]
   },
   {
@@ -22,6 +24,7 @@ export const skillCategories = [
       { name: 'Git', icon: 'SiGit', level: 'Advanced' },
       { name: 'GitHub', icon: 'SiGithub', level: 'Advanced' },
       { name: 'VS Code', icon: 'SiVisualstudiocode', level: 'Advanced' },
+      { name: 'pytest', icon: 'SiPytest', level: 'Intermediate' },
       { name: 'Linux Basics', icon: 'SiLinux', level: 'Intermediate' }
     ]
   }
@@ -36,6 +39,8 @@ const skills = [
   'Git',
   'GitHub',
   'REST APIs',
+  'LLM Agents',
+  'Speech AI',
   'Data Visualization'
 ];
 

@@ -40,7 +40,7 @@ export default function Hero() {
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed mx-auto md:mx-0">
-            Passionate 2nd-year AI Engineering student crafting data-driven applications, production-ready REST APIs, and automated analytics dashboards.
+            Passionate 2nd-year AI Engineering student building voice AI assistants, data-driven applications, production-ready REST APIs, and automated analytics dashboards.
           </p>
 
           {/* Action Buttons */}
@@ -76,7 +76,7 @@ export default function Hero() {
             <span className="font-semibold text-slate-300 flex items-center gap-1">
               <FiTerminal className="text-teal-400" /> Core Tech:
             </span>
-            {['Python', 'FastAPI', 'PostgreSQL', 'Excel Analytics', 'SQLAlchemy'].map((t) => (
+            {['Python', 'LLM Agents', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Excel Analytics'].map((t) => (
               <span key={t} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-slate-300 font-mono">
                 {t}
               </span>
