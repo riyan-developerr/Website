@@ -41,7 +41,10 @@ export default function Contact() {
 
       const data = await response.json();
 
-      if (response.ok || data.success === 'true') {
+      // FormSubmit answers 200 with success "false" (e.g. form not yet activated), so trust its flag when present
+      const sent = data.success === undefined ? response.ok : String(data.success) === 'true';
+
+      if (sent) {
         setStatus({ loading: false, success: true, error: '' });
         setFormState({ name: '', email: '', subject: '', message: '' });
       } else {
@@ -52,13 +55,12 @@ export default function Contact() {
         });
       }
     } catch {
-      // Fallback grace if offline or blocked
+      // Offline or blocked: say so and keep the message so the visitor can email it instead
       setStatus({
         loading: false,
-        success: true,
-        error: ''
+        success: false,
+        error: `Couldn't send your message. Please email me directly at ${RECIPIENT_EMAIL}.`
       });
-      setFormState({ name: '', email: '', subject: '', message: '' });
     }
   };
 

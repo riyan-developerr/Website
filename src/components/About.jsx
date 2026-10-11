@@ -37,14 +37,19 @@ export default function About() {
             <p className="text-slate-400 text-sm leading-relaxed">
               My focus is on understanding deep backend mechanics, writing clean relational schemas with PostgreSQL and SQLAlchemy, creating async microservices with FastAPI, and transforming complex raw data into actionable insights.
             </p>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              My first personal project, <a href="#jarvis" className="text-teal-300 font-semibold hover:underline">Jarvis</a>, is a voice assistant that controls a Windows laptop: on-device speech recognition, an LLM agent that uses tools, and a safety layer that checks every action before it runs.
+            </p>
           </div>
 
           {/* Bulleted Core Principles */}
           <div className="grid sm:grid-cols-2 gap-3 pt-4 border-t border-white/5">
             {[
               'Backend API Architecture',
+              'AI Agents & Tool Calling',
               'Data Visualization & Analytics',
               'Clean & Maintainable Code',
+              'Automated Testing',
               'Continuous Skill Building'
             ].map((principle) => (
               <div key={principle} className="flex items-center gap-2 text-xs font-medium text-slate-300">

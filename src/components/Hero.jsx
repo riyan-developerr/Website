@@ -40,8 +40,22 @@ export default function Hero() {
           </h2>
 
           <p className="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed mx-auto md:mx-0">
-            Passionate 2nd-year AI Engineering student crafting data-driven applications, production-ready REST APIs, and automated analytics dashboards.
+            Passionate 2nd-year AI Engineering student building AI agents, production-ready REST APIs, and automated analytics dashboards.
           </p>
+
+          {/* Latest project callout */}
+          <a
+            href="#jarvis"
+            className="group inline-flex items-center gap-3 pl-1.5 pr-4 py-1.5 rounded-full bg-slate-900/80 border border-white/10 hover:border-teal-500/40 transition-colors text-sm text-slate-300"
+          >
+            <span className="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-teal-500 to-emerald-500 text-slate-950 text-xs font-bold">
+              New
+            </span>
+            <span>
+              <span className="font-semibold text-white">Jarvis</span>, my voice assistant for Windows
+            </span>
+            <FiArrowRight className="w-4 h-4 text-teal-400 group-hover:translate-x-0.5 transition-transform" />
+          </a>
 
           {/* Action Buttons */}
           <div className="pt-2 flex flex-wrap items-center justify-center md:justify-start gap-4">
@@ -76,7 +90,7 @@ export default function Hero() {
             <span className="font-semibold text-slate-300 flex items-center gap-1">
               <FiTerminal className="text-teal-400" /> Core Tech:
             </span>
-            {['Python', 'FastAPI', 'PostgreSQL', 'Excel Analytics', 'SQLAlchemy'].map((t) => (
+            {['Python', 'LLM Agents', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Excel Analytics'].map((t) => (
               <span key={t} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-slate-300 font-mono">
                 {t}
               </span>
